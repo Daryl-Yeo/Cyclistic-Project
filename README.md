@@ -4,6 +4,11 @@
 
 Hello there! Welcome to my first project. In this case study, I assume the role of a data analyst working with the marketing analytics team at Cyclistic, a bike-share company in Chicago. 
 
+Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the
+flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
+
+Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the pricing flexibility helps Cyclistic attract more customers, Cyclistic's marketing director believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, there is a solid opportunity to convert casual riders into members. 
+
 ## Step 1: ASK 
 
 ### The business task
@@ -17,6 +22,10 @@ Identify how annual members and casual members use Cyclistic bikes differently a
 * Cyclistic's executive team. 
 
 ## Step 2: Prepare
+
+In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+
 
 ## Step 3: Process 
 
@@ -186,7 +195,10 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v4`
 WHERE member_casual = "casual"
 GROUP BY
   LEFT(CAST(started_time AS STRING),2)
+ORDER BY COUNT(*) DESC
+LIMIT 10
 ```
+Repear for annual members.
 
 **Summary of Analysis Findings**
 
