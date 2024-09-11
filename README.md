@@ -23,4 +23,4 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
 }
 ```
 
-![Tableau Dashboard](Macintosh HD⁩ ▸ ⁨Users⁩ ▸ ⁨yeodaryl⁩ ▸ ⁨Downloads⁩)
+![Tableau Dashboard](Dashboard 1.png)
