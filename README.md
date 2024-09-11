@@ -23,9 +23,7 @@ Identify how annual members and casual members use Cyclistic bikes differently a
 
 ## Step 2: Prepare
 
-In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
-
-
+In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
 
 ## Step 3: Process 
 
