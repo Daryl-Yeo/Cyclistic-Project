@@ -189,6 +189,7 @@ GROUP BY
 ```
 
 **Summary of Analysis Findings**
+
 Note: Business task is to identify annual members and causal riders use Cyclistic bikes differently.
 
 * Casual rider trips are significantly longer than that of annual members.
@@ -215,8 +216,10 @@ Tool(s): Tableau Public
 
 ![Tableau Dashboard](Dashboard 1.png)
 
-You may also view the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1)
+You may also view the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1).
 
 ## Step 6: ACT
 
+My recommendations are as follows:
 
+1. 
