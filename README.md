@@ -210,4 +210,13 @@ Second most popular route going the other way from State St & 33rd St to Calumet
 With these findings & insights in mind, the next step focuses on visualizing in a meaningful way for my audience (Lily Moreno and the executive team) to understand.
 
 ## Step 5: SHARE 
+
+Tool(s): Tableau Public
+
 ![Tableau Dashboard](Dashboard 1.png)
+
+You may also view the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1)
+
+## Step 6: ACT
+
+
