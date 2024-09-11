@@ -29,7 +29,6 @@ Note: With a total of 5,743,278 rows - SQL was the preferred choice over spreads
 ### 2. Removing NULL values.
 
 ```
-{
 SELECT
   COUNT(*) - COUNT(ride_id) AS ride_id_null,
   COUNT(*) - COUNT(rideable_type) AS rideable_type_null,
@@ -45,7 +44,6 @@ SELECT
   COUNT(*) - COUNT(end_lng) AS end_lng_null,
   COUNT(*) - COUNT(member_casual) AS member_casual_null
 FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
-}
 ```
 
 * Columns with NULL values:
@@ -57,7 +55,6 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
 * End_lng (7,684)
 
 ```
-{
 DELETE FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
 WHERE 
   start_station_name IS NULL OR
@@ -66,17 +63,14 @@ WHERE
   end_station_id IS NULL OR
   end_lat IS NULL OR
   end_lng IS NULL;
-}
 ```
 
 ### 3. Check for duplicates of primary key: ride_id 
 
 ```
-{
 SELECT
   COUNT(ride_id) - COUNT(DISTINCT(ride_id)
 FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data` 
-}
 ```
 
 Output: 0 duplicates.
@@ -85,7 +79,6 @@ Output: 0 duplicates.
 At the same time, remove unnecessary fields for analysis (start_lat, start_lng, end_lat, end_lng)
 
 ```
-{
 CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v2` AS
 (
   SELECT
@@ -102,14 +95,12 @@ CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v2` AS
     member_casual
   FROM FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
 )
-}
 ```
 
 ### 5. Add new columns: ride_length and day_of_week
 
 **Ride Length**
 ```
-{
 CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3` AS
 (
   SELECT
@@ -121,14 +112,12 @@ CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3` AS
     AS ride_length
   FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v2`
 )
-}
 ```
 
 **Day of Week**
 
 Firstly, modify all dates to the following format: YYYY-MM-DD. 
 ```
-{
 UPDATE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3`
 SET ended_date = CAST(CONCAT("20",RIGHT(CAST(ended_date AS STRING),2),"-",SUBSTR(CAST(ended_date AS STRING),6,2),"-",SUBSTR(CAST(ended_date AS STRING),3,2)) AS DATE)
 WHERE ride_id IN
@@ -139,14 +128,12 @@ WHERE ride_id IN
   WHERE
     LEFT(CAST(ended_date AS STRING), 2) = "00"
   )
-}
 ```
 Repeat the above for started_date column. 
 
 Next. add the new columns: year_of_ride, month_of_ride, day_of_week.
 
 ```
-{
 CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data_v4` AS
 (
 SELECT
@@ -156,7 +143,6 @@ SELECT
   FORMAT_DATE('%A', DATE(started_date)) AS day_of_week
 FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3`
 )
-}
 ```
 
 ### 6. Finally, remove ride_lengths < 1 as these rides are likely to be unintentional, system glitches or that the user changed his/her mind before even riding. 
@@ -165,6 +151,9 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3`
 
 **Tool(s): SQL BigQuery + Spreadsheets.**
 
+From SQL BQ, I first explored the cleaned dataset using Google sheets to get a quick summary of my findings. 
+
+![Overview of data: Aggregation, AVG ride lengths, and number of trips)( 
 
 ## Step 5: SHARE 
 ![Tableau Dashboard](Dashboard 1.png)
