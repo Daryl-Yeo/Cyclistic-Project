@@ -35,6 +35,49 @@ In this analysis, 12 months of historical trip data was analysed. The datasets c
 
 Note: With a total of 5,743,278 rows - SQL was the preferred choice for data cleaning. 
 
+```
+CREATE TABLE `capstone-cyclistic-434906.Historical_Data.Combined_Data` AS 
+SELECT * 
+FROM
+  (
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_05_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_05_Part1`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_04`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_03`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_02`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2024_01`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_12`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_11`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_10_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_10_Part1`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_09_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_09_Part1`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_08_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_08_Part1`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_07_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_07_Part1`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_06_Part2`
+  UNION ALL
+  SELECT * FROM `capstone-cyclistic-434906.Historical_Data.2023_06_Part1`
+)
+```
+
 ### 2. Removing NULL values.
 
 ```
@@ -55,7 +98,7 @@ SELECT
 FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data`
 ```
 
-* Columns with NULL values:
+Columns with NULL values:
 * Start_station_name (905,237)
 * Start_station_id (905,237)
 * End_station_name (956,579)
