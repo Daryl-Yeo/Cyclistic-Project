@@ -25,7 +25,7 @@ Identify how annual members and casual members use Cyclistic bikes differently a
 
 ## Step 2: Prepare
 
-In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement). 
+In this analysis, 12 months of historical trip data was analysed. The datasets can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement). 
 
 ## Step 3: Process 
 
@@ -198,11 +198,11 @@ GROUP BY
 ORDER BY COUNT(*) DESC
 LIMIT 10
 ```
-Repear for annual members.
+Repeat for annual members.
 
 **Summary of Analysis Findings**
 
-Note: Business task is to identify annual members and causal riders use Cyclistic bikes differently.
+Note: Business task is to identify annual members and casual riders use Cyclistic bikes differently.
 
 * Casual rider trips are significantly longer than that of annual members.
 * Casual riders tend to ride more over the weekend while annual members tend to ride more during the weekdays.
