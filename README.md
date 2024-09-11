@@ -4,10 +4,12 @@
 
 Hello there! Welcome to my first project. In this case study, I assume the role of a data analyst working with the marketing analytics team at Cyclistic, a bike-share company in Chicago. 
 
+### The Context
+
 Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the
 flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 
-Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the pricing flexibility helps Cyclistic attract more customers, Cyclistic's marketing director believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, there is a solid opportunity to convert casual riders into members. 
+Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the pricing flexibility helps Cyclistic attract more customers, Cyclistic's marketing director believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, there is a solid opportunity to convert casual riders into members.  
 
 ## Step 1: ASK 
 
@@ -23,7 +25,7 @@ Identify how annual members and casual members use Cyclistic bikes differently a
 
 ## Step 2: Prepare
 
-In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+In this analysis, 12 months of historical trip data was analysed. The dataset can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html).  The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement). 
 
 ## Step 3: Process 
 
