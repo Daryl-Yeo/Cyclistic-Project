@@ -33,7 +33,7 @@ In this analysis, 12 months of historical trip data was analysed. The datasets c
 
 ### 1. Combining 12 months of historical trip data into a single table. 
 
-Note: With a total of 5,743,278 rows - SQL was the preferred choice over spreadsheets. 
+Note: With a total of 5,743,278 rows - SQL was the preferred choice for data cleaning. 
 
 ### 2. Removing NULL values.
 
