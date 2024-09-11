@@ -153,7 +153,61 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3`
 
 From SQL BQ, I first explored the cleaned dataset using Google sheets to get a quick summary of my findings. 
 
-![Overview of data: Aggregation, AVG ride lengths, and number of trips)( 
+![Overview of data: Aggregation, AVG ride lengths, and number of trips)(spreadsheets_findings.png)
+
+* Casual riders have a longer ride_length than annual members.
+* Weekends see the longest ride_length for both groups.
+* Middle period of the year (May - August) receives a longer ride_length across both groups.
+* For casual riders, weekends had more rides than weekedays while for annual riders, weekdays had more rides than weekends.
+* Middle period of the year (June - August) receives the most number of rides across both groups.
+
+### Most popular route for both groups
+
+```
+SELECT
+  start_station_name,
+  end_station_name,
+  COUNT(ride_id) AS num_of_rides
+FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v4`
+WHERE member_casual = "member"
+GROUP BY start_station_name, end_station_name
+ORDER BY num_of_rides DESC
+LIMIT 10
+```
+Repeat for casual riders. 
+
+### Most popular ride times for both groups
+
+```
+SELECT
+  COUNT(*),
+  LEFT(CAST(started_time AS STRING),2) AS ride_time
+FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v4`
+WHERE member_casual = "casual"
+GROUP BY
+  LEFT(CAST(started_time AS STRING),2)
+```
+
+**Summary of Analysis Findings **
+_Note: Business task is to identify annual members and causal riders use Cyclistic bikes differently._
+
+* Casual rider trips are significantly longer than that of annual members.
+* Casual riders tend to ride more over the weekend while annual members tend to ride more during the weekdays.
+* Casual rider trips tend to be two-way - starting and ending at the same station.
+** Top stations (1) Streeter Dr & Grand Ave and (2) Dusable Lake Shore Dr & Monroe St are both located by large city parks.
+* Annual member trips tend to be one way.
+** Most popular route starting from Calumet Ave & 33rd St (a residential area) to State St & 33rd St (a university campus).
+** Second most popular route going the other way from State St & 33rd St to Calumet Ave & 33rd St.
+* For both groups, late afternoon (1500 - 1900 hrs) represent the top ride times, with 0800-0900 hrs an additional popular timing for annual members. 
+
+
+**Conclusion:**
+
+1. Casual riders tend to use Cyclistic bikes for weekend leisure in the late afternoon, most commonly at the Polk Bros Park and Maggie Daley Park. 
+
+2. Annual members tend to use Cyclistic bikes for commuting during the weekdays, most commonly from the residential area at Calumet Ave & 33rd St to the Illinois Institute of Technology. 
+
+With these findings & insights in mind, the next step focuses on visualizing in a meaningful way for my audience (Lily Moreno and the executive team) to understand.
 
 ## Step 5: SHARE 
 ![Tableau Dashboard](Dashboard 1.png)
