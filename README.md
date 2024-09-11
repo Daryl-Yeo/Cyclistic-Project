@@ -153,7 +153,7 @@ FROM `capstone-cyclistic-434906.Historical_Data.Combined_Data_v3`
 
 From SQL BQ, I first explored the cleaned dataset using Google sheets to get a quick summary of my findings. 
 
-![Overview of data: Aggregation, AVG ride lengths, and number of trips)(spreadsheets_findings.png)
+![Overview of data: Aggregation, AVG ride lengths, and number of trips](spreadsheets_findings.png)
 
 * Casual riders have a longer ride_length than annual members.
 * Weekends see the longest ride_length for both groups.
@@ -188,20 +188,20 @@ GROUP BY
   LEFT(CAST(started_time AS STRING),2)
 ```
 
-**Summary of Analysis Findings **
-_Note: Business task is to identify annual members and causal riders use Cyclistic bikes differently._
+**Summary of Analysis Findings**
+Note: Business task is to identify annual members and causal riders use Cyclistic bikes differently.
 
 * Casual rider trips are significantly longer than that of annual members.
 * Casual riders tend to ride more over the weekend while annual members tend to ride more during the weekdays.
 * Casual rider trips tend to be two-way - starting and ending at the same station.
-** Top stations (1) Streeter Dr & Grand Ave and (2) Dusable Lake Shore Dr & Monroe St are both located by large city parks.
+Top stations (1) Streeter Dr & Grand Ave and (2) Dusable Lake Shore Dr & Monroe St are both located by large city parks.
 * Annual member trips tend to be one way.
-** Most popular route starting from Calumet Ave & 33rd St (a residential area) to State St & 33rd St (a university campus).
-** Second most popular route going the other way from State St & 33rd St to Calumet Ave & 33rd St.
+Most popular route starting from Calumet Ave & 33rd St (a residential area) to State St & 33rd St (a university campus).
+Second most popular route going the other way from State St & 33rd St to Calumet Ave & 33rd St.
 * For both groups, late afternoon (1500 - 1900 hrs) represent the top ride times, with 0800-0900 hrs an additional popular timing for annual members. 
 
 
-**Conclusion:**
+**Conclusion**
 
 1. Casual riders tend to use Cyclistic bikes for weekend leisure in the late afternoon, most commonly at the Polk Bros Park and Maggie Daley Park. 
 
