@@ -292,6 +292,6 @@ With the objective of converting casual riders to annual members, my recommendat
 
 * As casual riders tend to ride more during weekends for leisure, weekend memberships could be introduced as a variation of the annual membership. 
 
-**END**
 
-*If you've read till here, I thank you for your time. This project has been useful in strengthing my analytical skills with SQL, Spreadsheets and Tableau. If you're interested, I welcome you follow along my data analytics journey by checking out my next project(s)!* 
+
+*If you've read till here, I thank you for your time. This project has been useful in strengthing my analytical skills with SQL, Spreadsheets and Tableau. If you're interested, I welcome you follow along my data analytics journey by checking out my upcoming projects!* 
