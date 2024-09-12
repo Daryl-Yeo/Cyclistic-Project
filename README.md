@@ -269,12 +269,20 @@ With these findings & insights in mind, the next step focuses on visualizing in 
 
 Tool(s): Tableau Public
 
-![Tableau Dashboard](Dashboard 1.png)
+![Tableau Dashboard](Tableau dashboard.png)
 
-You may also view the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1).
+You may also explore the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1).
 
 ## Step 6: ACT
 
-My recommendations are as follows:
+It’s finally time to act on these findings with data-driven recommendations. 
+With the objective of converting casual riders to annual members, my recommendations are as follows:
 
-1. 
+* Cyclistic can organize Out-of-Home (OOH) marketing campaigns at the Polk Bros Park and Maggie Daley Park on Saturdays and Sundays, 3pm to 7pm. This targeted approach ensures that Cyclistic reaches out as many casual riders as possible without wasting additional resources. 
+
+* Marketing budget should be increased during the summer period from May to September as casual riders tend to ride more and are more likely to engage with the campaigns mentioned above. 
+
+* As casual riders tend to ride more during weekends for leisure, weekend memberships could be introduced as a variation of the annual membership. 
+
+
+*If you've read till here, I thank you for your time. This project has been useful in strengthing my analytical skills with SQL, Spreadsheets and Tableau. If you're interested, I welcome you follow along my data analytics journey by checking out my next project(s)!* 
