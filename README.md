@@ -273,6 +273,14 @@ Tool(s): Tableau Public
 
 You may also explore the entire dashboard [here](https://public.tableau.com/app/profile/daryl.yeo4108/viz/CyclisticAnalysis_17260278009950/Dashboard1).
 
+**Storytelling - Casual riders (Clockwise):**
+* Casual riders tend to start and end their journey at the same station, most commonly at Streeter Dr & Grand Ave and Dusable Lake Shore Dr & Monroe St - stations that are beside big city parks.
+* Casual riders ride significantly more during the weekends;
+* While their ride lengths tend to increase during the summer period when Chicago receives more sunshine.
+* Their ride count also reflects this trend, increasing during the summer months.
+* Finally, late afternoons are their preferred ride timings. 
+
+
 ## Step 6: ACT
 
 It’s finally time to act on these findings with data-driven recommendations. 
@@ -284,5 +292,6 @@ With the objective of converting casual riders to annual members, my recommendat
 
 * As casual riders tend to ride more during weekends for leisure, weekend memberships could be introduced as a variation of the annual membership. 
 
+**END**
 
 *If you've read till here, I thank you for your time. This project has been useful in strengthing my analytical skills with SQL, Spreadsheets and Tableau. If you're interested, I welcome you follow along my data analytics journey by checking out my next project(s)!* 
